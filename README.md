@@ -1,4 +1,4 @@
 # Project_Euler
 
-try to [projecteuler](https://projecteuler.net/)
+try to [Project Euler](https://projecteuler.net/)  
 This is my note
