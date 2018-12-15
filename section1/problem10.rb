@@ -16,5 +16,4 @@ for i in 3..2000000
   end
 end
 
-# p a_list
 p a_list.sum
