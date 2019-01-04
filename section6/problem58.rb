@@ -24,13 +24,7 @@ a_list.each do |ele|
     [ele, ele - diff, ele - diff*2, ele - diff*3].each do |list_i|
       sum += prime_check(list_i)
     end
-    p sum
-    p use_list.size
-    p sum/(use_list.size).to_f
-    p '////'
     if sum/(use_list.size).to_f < 0.1
-      p sum
-      p use_list.size
       p Math.sqrt(ele)
       break
     end
