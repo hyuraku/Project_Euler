@@ -1,5 +1,4 @@
 sum = 0
-target = 5
 
 a_list = ((1..1001).map{|i| i**2 if i%2==1 }).compact
 
