@@ -36,3 +36,5 @@ prime_hash.each do |index,list|
     end
   end
 end
+
+p ans
