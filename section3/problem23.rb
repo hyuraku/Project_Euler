@@ -1,24 +1,3 @@
-def perf(n)
-  divisors = []
-  for i in 1..Math.sqrt(n)
-    divisors << i << n/i  if n % i == 0
-  end
-  divisors.uniq.inject(:+)  > n * 2
-end
-
-a_list = []
-
-for n in 1..28123
-  a_list << n if perf(n)
-end
-
-a_list = (a_list.repeated_combination(2).map { |e| e.first + e.last if e.first + e.last <= 28123}).compact.uniq.sort
-# p a_list
-
-a = (1..28123).to_a - a_list
-p a
-p a.sum
-
 class Problem23
   def initialize
     @start = 1
