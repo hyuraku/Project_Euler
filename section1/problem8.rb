@@ -18,26 +18,38 @@ number_list= ['73167176531330624919225119674426574742355349194934',
 '84580156166097919133875499200524063689912560717606',
 '05886116467109405077541002256983155200055935729725',
 '71636269561882670428252483600823257530420752963450']
-
 target_number = number_list.join
 # target_number = target_number.split(',')
 
-p target_number[0..10]
-
-def connect_sum(tar,list)
-  sum = 1
-  (0..12).each do |i|
-    sum = sum * list[tar + i].to_i
+class Problem8
+  def initialize(target_number)
+    @max_sum = 0
+    @target_number = target_number
   end
-  sum
-end
-max_sum = 0
 
-(0..target_number.size).each do |i|
-  sum = connect_sum(i,target_number)
-  if max_sum < sum
-    max_sum = sum
+  def run
+    cal_sum(@target_number)
+  end
+
+  private
+
+  def connect_sum(tar,list)
+    sum = 1
+    (0..12).each do |i|
+      sum = sum * list[tar + i].to_i
+    end
+    sum
+  end
+
+  def cal_sum(target_number)
+    (0..target_number.size).each do |i|
+      sum = connect_sum(i,target_number)
+      if @max_sum < sum
+        @max_sum = sum
+      end
+    end
+    @max_sum
   end
 end
 
-p max_sum
+p Problem8.new(target_number).run

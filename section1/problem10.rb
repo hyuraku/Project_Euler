@@ -1,19 +1,20 @@
-a_list = [2]
+require 'prime'
 
-for i in 3..2000000
-  time = 0
-  for ele in a_list
-    if ele > i/2
-      break
-    end
-    if i%ele == 0
-      time += 1
-      break
-    end
+class Problem10
+  def initialize(start, goal)
+    @start = start
+    @goal = goal
+    @list = []
   end
-  if time == 0
-    a_list.push(i)
+
+  def run
+    (@start..@goal).each do |i|
+      if Prime.prime?(i)
+        @list << i
+      end
+    end
+    @list.sum
   end
 end
 
-p a_list.sum
+p Problem10.new(1, 2000000).run
