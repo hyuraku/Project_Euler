@@ -7,7 +7,7 @@ class Problem6
 
   def run
     (@start..@goal).each do |ele|
-      @total  = @total  * ele / fanction(@total ,ele)
+      @total  = @total  * ele / greatest_commom(@total ,ele)
     end
     @total
   end
