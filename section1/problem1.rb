@@ -6,16 +6,22 @@ class First_problem
   end
 
   def run
-    (@start..(@goal-1)).each do |num|
+    fizzbuzz(@start, @goal, @sum)
+  end
+
+  private
+
+  def fizzbuzz(start, goal, sum)
+    (start..(goal-1)).each do |num|
       if num%15 == 0
-        @sum += num
+        sum += num
       elsif num%3 == 0
-        @sum += num
+        sum += num
       elsif num%5 == 0
-        @sum += num
+        sum += num
       end
     end
-  @sum
+    sum
   end
 end
 
