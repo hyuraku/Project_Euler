@@ -1,29 +1,25 @@
-# a_list = [2]
-# for tar in 2..10 ** 7
-#   time = 0
-#   for ele in a_list do
-#     if tar%ele == 0
-#       time += 1
-#     end
-#   end
-#   if time == 0
-#     a_list.push(tar)
-#   end
-#   if a_list.length == 10001
-#     p "#{tar} is target"
-#     break
-#   end
-# end
+require 'prime'
 
-require "prime"
-
-time = 0
-for tar in 2..10 ** 7
-  if (tar).prime?
-    time += 1
+class Problem7
+  def initialize
+    @time = 0
+    @start = 2
+    @goal = 10 ** 7
+    @ans = 0
   end
-  if time == 10001
-    p "#{tar} is the target"
-    break
+
+  def run
+    (@start..@goal).each do |tar|
+      if (tar).prime?
+        @time += 1
+      end
+      if @time == 10001
+        @ans = tar
+        break
+      end
+    end
+    @ans
   end
 end
+
+p Problem7.new().run
