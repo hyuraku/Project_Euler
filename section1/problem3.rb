@@ -11,3 +11,13 @@ target = 600851475143
 require 'prime'
 
 p (Prime.prime_division(target).map {|p, e| [p] * e }.flatten).max
+
+class Problem3(goal)
+  def initialize
+    @goal = goal
+  end
+
+  def run
+
+  end
+end
