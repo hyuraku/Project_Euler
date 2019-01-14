@@ -1,14 +1,16 @@
-a_list = []
-
-(1..21).each do |ele|
-  a_list.push(1)
-end
-
-(1..20).each do |i|
-  (2..21).each do |ele|
-    a_list[ele-1] = a_list[ele-1] + a_list[ele-2]
+class Problem15
+  def initialize
+    @list = [1]*21
   end
-  p a_list
+
+  def run
+    (1..20).each do |i|
+      (2..21).each do |ele|
+        @list[ele-1] = @list[ele-1] + @list[ele-2]
+      end
+    end
+    @list.last
+  end
 end
 
-p a_list.last
+p Problem15.new.run
