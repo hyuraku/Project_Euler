@@ -4,8 +4,8 @@ class Problem15
   end
 
   def run
-    (1..20).each do |i|
-      (2..21).each do |ele|
+    1.upto(20).each do |i|
+      2.upto(21).each do |ele|
         @list[ele-1] = @list[ele-1] + @list[ele-2]
       end
     end

@@ -13,7 +13,7 @@ def chain(n,list=[])
   end
 end
 
-for i in 2..10 ** 6
+2.upto(10 ** 6).each do |i|
   a_list = []
   chain(i, a_list)
   if a_list.size > max
