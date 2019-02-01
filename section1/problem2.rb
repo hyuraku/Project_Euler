@@ -22,7 +22,7 @@ class Problem2
   end
 
   def find_last(first, last, list, limit)
-    (first..last).each do |ele|
+    first.upto(last).each do |ele|
       finab(ele,list)
       if list.last > limit
         break

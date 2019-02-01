@@ -12,7 +12,7 @@ class First_problem
   private
 
   def fizzbuzz(start, goal, sum)
-    (start..(goal-1)).each do |num|
+    start.upto(goal).each do |num|
       if num%15 == 0
         sum += num
       elsif num%3 == 0

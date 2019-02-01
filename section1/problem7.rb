@@ -9,7 +9,7 @@ class Problem7
   end
 
   def run
-    (@start..@goal).each do |tar|
+    @start.upto(@goal).each do |tar|
       if (tar).prime?
         @time += 1
       end

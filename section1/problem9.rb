@@ -3,8 +3,8 @@ class Problem9
     @ans = 0
   end
   def run
-    (1..499).each do |b_i|
-      (1..(1000-b_i)).each do |a_i|
+    1.upto(499).each do |b_i|
+      1.upto(1000-b_i).each do |a_i|
         if check_number(a_i, b_i)
           @ans = (a_i)*(b_i)*(1000 - a_i - b_i)
           break
