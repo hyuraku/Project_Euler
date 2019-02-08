@@ -17,7 +17,7 @@ def divisor(n)
   }.sort()
 end
 
-(2..10000).each do |ele|
+2.upto(10000).each do |ele|
   list_sum = divisor(ele).sum - ele
   if ele == divisor(list_sum).sum - list_sum && ele != list_sum
     p ele

@@ -10,7 +10,7 @@ File.open("p022_names.txt","r") do |file|
   a_list.each_with_index do |one_word,a_list_index|
     one_word = one_word
     name_score = 0
-    (1..one_word.size-2).each do |one_letter_position|
+    1.upto(one_word.size-2).each do |one_letter_position|
       one_letter=one_word[one_letter_position]
       Alph.each_with_index do |tar,index|
         one_letter = one_letter.downcase

@@ -6,7 +6,7 @@ def finab(x,a_list)
   tar
 end
 
-(3..10000).each do |ele|
+3.upto(10000).each do |ele|
   tar = finab(ele,a_list)
   if  Math.log(tar,10) > 999
     p ele

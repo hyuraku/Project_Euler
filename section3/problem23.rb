@@ -16,7 +16,7 @@ class Problem23
 
   def perf(n)
     divisors = []
-    (1..Math.sqrt(n)).each do |i|
+    1.upto(Math.sqrt(n)).each do |i|
       divisors << i << n/i  if n % i == 0
     end
     divisors.uniq.inject(:+)  > n * 2
