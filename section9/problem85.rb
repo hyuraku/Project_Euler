@@ -1,4 +1,3 @@
-
 def count_square(width, height)
  (width+1)*(width) * (height+1) *(height) / 4
 end
@@ -21,9 +20,4 @@ x.each do |i|
 end
 p ans
 p (total -ans) * ans
-p (2000000-diff)
-
-
-# 1978230
-
-# 44 , 107-44
+p ( 2000000-diff)
