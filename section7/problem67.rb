@@ -1,12 +1,10 @@
 file = File.open("067_triangle.txt")
-# file_data = file.read
+
 target = []
 file.readlines.each do |arr|
   arr = arr.split(" ").map(&:to_i)
   target << arr
 end
-
-# p target
 
 def solution(arr)
   (arr.size-2).downto(0) do |i|
